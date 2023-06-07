@@ -1,0 +1,25 @@
+<header>
+    <link rel="stylesheet" href="../../assets/stylesheets/token.css"> <!-- css読み込み -->
+    <h1 style="text-align:center">      <!-- 中央揃え -->
+        <p class="dunerode" >
+        <%= link_to image_tag("sakyu.png"),"/" %><%= link_to "DuneRoad","/",class:"underline" %>
+        </p>   
+        <p class="search">           
+        <%= form_with url: search_path_path, local: true, method: :get do |f| %>
+        <%= f.text_field :search ,size:30 ,placeholder:"キーワード検索",class:"search_container"%>
+            <%= f.submit "search" ,class:"search_botton "%>   
+        <% end %> 
+        </p> 
+        <p class="login">                 
+        <%if user_signed_in?%><%= link_to "profile", user_profile_path %>
+        <%if current_user.id == 1%><%= link_to "go exhibit", exhibit_path_url %>
+        <%end%>
+        <%else%>  
+            <%= link_to "login /", new_user_session_path ,class:"underlineLog"%>
+            <%= link_to "sign up", new_user_registration_path ,class:"underlinenew"%>   
+        <% end %>      
+        </p>
+    </h1> 
+</header>        
+
+  

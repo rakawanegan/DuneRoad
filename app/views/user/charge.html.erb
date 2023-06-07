@@ -1,0 +1,17 @@
+<%= render 'layouts/token_header' %>
+
+<body>
+<h1>charge</h1>
+
+<h3>id:
+<%= current_user.id %></h3>
+<h3>assets:
+<%= current_user.assets %></h3>
+
+    <%= form_for(:add_asset, url: asset_update_path_path, method: :get) do |f| %>
+        <p>
+            <%= f.label :add_asset, "add_asset" %><br>
+            <%= f.text_field :add_asset, step: "100" %>
+        </p>
+        <%= f.submit "charge"%>
+    <%end%>

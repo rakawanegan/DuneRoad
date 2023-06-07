@@ -1,0 +1,23 @@
+<%= render 'layouts/token_header' %>
+
+<body>
+
+<br>
+<%= @word %>
+<%if not @tasks.nil?%>
+<% @tasks.each do |task| %>
+  <p>
+    <%= task.title %> |<%= task.detail %>| <%= task.tag %> | <%= task.price %> |
+    <%if token.admin == false%><%= button_to "bid", {controller: 'token', action: 'purchase'}, {method: :get, params: {token_id:(token.token_id)}} %><%end%>
+  </p>
+<% end %>
+<%end%>
+</h2>
+
+<br>
+<!-- Lancers Code START -->
+<a href="https://www.lancers.jp/affiliate/track?id=2484168&link=%2Fmenu%2Fdetail%2F1247075" target="_blank" rel="nofollow">
+出品されていない課題の悩み、運営に直接依頼しませんか？</a>
+<!-- Lancers Code END -->
+
+</body>

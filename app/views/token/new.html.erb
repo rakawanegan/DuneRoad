@@ -1,0 +1,37 @@
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="members.scss" type="text/css">
+</head>
+<h1>
+    regist Token
+    <%= link_to "top", root_path %>
+</h1>
+<body>
+    <%= form_for(@token, url: token_path, method: :post) do |f| %>
+        <p>
+            <%= f.label :title, "title" %><br>
+            <%= f.text_field :title %>
+        </p>
+        <p>
+            <%= f.label :image, "image" %><br>
+            <%= f.file_field :image %>
+        </p>
+        <p>
+            <%= f.label :detail, "detail" %><br>
+            <%= f.text_field :detail %>
+        </p>
+        <p>
+        <%= f.label :tag, "tag" %><br>
+            <%= f.text_field :tag %>
+        </p>
+        <p>
+            <%= f.label :price, "price" %><br>
+            <%= f.text_field :price %>
+        </p>
+        <p>
+            <%= f.label :holder, "holder" %><br>
+            <%= f.text_field :holder %>
+        </p>
+        <%= f.submit "登録する"%>
+    <% end %>
+</body>

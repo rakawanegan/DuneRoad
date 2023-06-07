@@ -1,0 +1,25 @@
+<%= render 'layouts/token_header' %>
+
+<body>
+<h1>about me</h1>
+
+<%if user_signed_in?%>
+<h3>email:
+<%= @user.email %></h3>
+<h3>id:
+<%= @user.id %></h3>
+<h3>assets:
+<%= @user.assets %></h3>
+    <%= button_to "charge", {controller: 'user', action: 'charge'}, {method: :get} %>
+	<div>title |detail|tag|price|holder|token_id</div> 
+<% @tokens.each do |token| %>
+  <p>
+    <%= token.title %> |<%= token.detail %>| <%= token.tag %> | <%= token.price %> | <%= token.holder %> | <%= token.token_id %> |
+    <%= button_to "download", {controller: 'token', action: 'download'}, {method: :get, params: {token_id:(token.token_id)}} %>
+    <%if token.admin%><%= button_to "release", {controller: 'token', action: 'release'}, {method: :get, params: {token_id:(token.token_id)}} %><%end%>
+  </p>
+<% end %>
+<%else%>
+<%= link_to "login", new_user_session_path %>
+<% end %>
+</body>

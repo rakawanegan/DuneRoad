@@ -1,0 +1,74 @@
+h1{
+    display: table;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-image: url("njh.jpg");
+    background-position: center center;
+    overflow: hidden;
+    margin-top: 0; 
+ }
+ 
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.duneroad{
+    display: table-cell;
+    text-align: center; 
+    float: left;
+    position: relative;
+    left: 10%;
+} 
+
+.underline{
+    text-decoration: none;
+    font-family: 'Monotype Corsiva','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+}
+
+.underlineLog{
+    text-decoration: none;
+    font-family: 'Monotype Corsiva','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+}
+
+.underlinenew{
+    text-decoration: none;
+    font-family: 'Monotype Corsiva','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+}
+
+.search{
+    display: table-cell;
+    text-align: center;
+}
+
+.search_container{
+    box-sizing: border-box;
+    position: relative;
+    border: 1px solid #999;
+    display: block;
+    padding: 3px 10px;
+    border-radius: 20px;
+    height: 2.3em;
+    width: 70%;
+    overflow: hidden;
+    float: left;
+  }
+
+.search_botton{
+    cursor: pointer;
+    border: none;
+    background: #3879D9;
+    color: #fff;
+    outline : none;
+    height: 2.2em;
+    float: left;
+    border-radius:30px;
+  }
+  
+.login{
+    display: table-cell;
+    text-align: center;
+    position: relative;
+    right: 8%;
+}

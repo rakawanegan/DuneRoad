@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  timestamp: 2022-12-05 20:27:00
+  tag: MyString
+  image: 
+  holder: 1
+  pre_holders: MyString
+  price: 1.5
+  token_id: 1
+  summary: MyText
+
+two:
+  title: MyString
+  timestamp: 2022-12-05 20:27:00
+  tag: MyString
+  image: 
+  holder: 1
+  pre_holders: MyString
+  price: 1.5
+  token_id: 1
+  summary: MyText
